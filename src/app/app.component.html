@@ -1,1 +1,9 @@
-<app-nx-welcome></app-nx-welcome>
+<input type="text" placeholder="Search a book" [formControl]="inputControl" />
+
+<h3>Books</h3>
+
+<ul>
+  <ng-container *ngFor="let item of foundBooks | async">
+    <li>{{ item }}</li>
+  </ng-container>
+</ul>
